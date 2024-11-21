@@ -1,0 +1,10 @@
+array.o: array.c array.h utils.h
+bltin.o: bltin.c bltin.h env.h jobs.h utils.h
+cmd.o: cmd.c bltin.h cmd.h array.h err.h env.h jobs.h utils.h
+env.o: env.c env.h utils.h
+err.o: err.c err.h
+jobs.o: jobs.c err.h jobs.h utils.h
+lex.yy.o: lex.yy.c cmd.h array.h y.tab.h
+main.o: main.c cmd.h array.h err.h jobs.h utils.h y.tab.h
+utils.o: utils.c err.h utils.h
+y.tab.o: y.tab.c cmd.h array.h
